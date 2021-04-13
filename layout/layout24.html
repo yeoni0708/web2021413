@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    
+    main {
+      width: 1200px;
+      margin: 0 auto;
+    }
+    .header {
+      height: 100px;
+      background-color: #ffe0b2;
+    }
+    .banner {
+      height: 300px;
+      background-color: #ffcc80;
+    }
+    .content {
+      background-color: #ffb74d;
+      overflow: hidden;
+      padding: 5%;
+    }
+    .content > div {
+      width: 18%;
+      height: 150px;
+      background-color: #e65100;
+      float: left;
+      margin: 1%;
+      border-radius: 10px;
+    }
+    .footer {
+      height: 100px;
+      background-color: #ffa726;
+    }
+    @media (max-width:1200px){
+      main {width: 100%;}
+      .content > div {
+        width: 23%;
+      }
+      .content > div:nth-child(5n){display: none;}
+    }
+    @media (max-width:768px){
+      .content > div {width: 31.3333%;}
+      .content > div:nth-child(5){display: block;}
+    }
+    @media (max-width:480px) {
+      .content > div {width: 48%;}
+      .content > div:nth-child(5n){display: block;}
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <main>
+  <header class="header"></header>
+  <article class="banner"></article>
+  <section class="content">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </section>
+  <footer class="footer"></footer>
+    </main>
+  </div>
+</body>
+</html>

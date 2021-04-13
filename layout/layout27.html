@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+        #wrap {
+            width: 100%;
+        }
+
+        #header {
+            
+        }
+
+        #header {
+    height: 100px;
+    /* background: #ccc; */
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    line-height: 100px;
+}
+.header .logo {
+    /* width: 20%; */
+    flex-basis: 20%;
+    position: relative;
+}
+.header .logo img {
+    width: 20%;
+    position: absolute;
+    top: 30px;
+    left: -15px;
+}
+.header .logo svg {
+    position: absolute;
+    top: 35px;
+    left: 40px;
+}
+.header .nav {
+    /* width: 60%; */
+    flex-basis: 60%;
+    text-align: center;
+}
+.header .nav li {
+    display: inline-block;
+}
+.header .nav li a {
+    text-decoration: none;
+    color: #000;
+    margin: 0 5px;
+    font-size: 16px;
+}
+.header .log {
+    /* width: 20%; */
+    flex-basis: 20%;
+    text-align: right;
+}
+.header .log a {
+    width: 100px;
+    height: 100px;
+    text-decoration: none;
+    color: #000;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 14px;
+    line-height: 36px;
+    border: 1px solid rgba(0, 0, 0, .3);
+}
+
+
+        #nav-oter {
+            height: 50px;
+            background: rgb(219, 217, 217);
+            flex-basis: 60%;
+            text-align: center;
+        }
+        #nav-oter li {
+            color: #000;
+            display: inline;
+            
+        }
+        #nav-oter li a {
+            text-decoration: none;
+            color: #000;
+            display: inline-block;
+            margin-top: 10px;
+            
+        }
+
+        /*nav*/
+        #contents {
+            height: 1000px;
+            background: #777;
+        }
+
+        #contents .cont {}
+        #contents .cont .cont1 {
+            height: 500px;
+            background: url(layout26img/banner-bg2.png) no-repeat;
+            background-size: cover;
+        }
+        #contents .cont .cont1 .font1 {
+            color: #fff;
+            font-size: 15px;
+            text-align: center;
+            padding-top: 40px;
+        }
+        #contents .cont .cont1 .font2 {
+            color: #fff;
+            font-size: 30px;
+            text-align: center;
+            padding: 20px;
+        }
+        #contents .cont .cont1 .font3 {
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        } 
+        #contents .cont .cont1 .font4 {
+            text-decoration: none;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        #contents .cont .cont1 a {
+            text-decoration: none;
+            color: royalblue;
+            background: #fff;
+            border-radius: 20px;
+            text-align: center;
+            display: inline-block;
+            padding: 5px 15px;   
+        }
+
+        #contents .cont .cont2 {
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+            
+            
+        }
+        #contents .cont .cont2 .room1 {
+            width: 50%;
+            height: 500px;
+            background: rgb(147, 166, 172);float: left;
+            background: url(layout27img/네이버인플루언서사람.png) no-repeat;
+            background-size: 70%;
+            position: absolute; top: 90px;
+            right: 473px;
+        }
+        #contents .cont .cont2 .room2 {
+            /* width: 50%;
+            height: 500px;
+            background: rgb(144, 155, 163);float: left; */
+        }
+        #contents .cont .cont2 .room2 .box1 {
+            width: 15px;height: 5px;
+            background: rgb(151, 44, 44);
+        }
+        .cont2 .room2 .box1{
+            width: 15px;
+            height: 2px;
+            background: #000;
+        }
+
+        /*content*/
+        #footer {
+            height: 200px;
+            background: rgb(245, 241, 241);
+        }
+
+        .container {
+            width: 1200px;
+            height: inherit;
+            /* background: rgba(0, 0, 0, 0.5); */
+            margin: 0 auto;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <!--해더-->
+        <header id="header">
+            <div class="container">
+                <div class="header">
+                    <div class="logo">
+                        <img src="https://ncreatorsnext.pstatic.net/img/logo.a61f5142308413b313275c691aa13c9a.gif"
+                            alt="" width="22" class="MobileGnb__image_logo___1Prf7">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194 30" fill="#121212" aria-hidden="true"
+                            width="194">
+                            <path
+                                d="M8.134 0v6.417L3.139 0H0v12.14h3.33V5.48l5.185 6.66h2.949V0zm9.924 0L12.89 12.226h3.537l.868-2.167h4.682l.885 2.167h3.607L21.301 0h-3.243zm1.596 3.989l1.352 3.45h-2.722l1.37-3.45zM34.219.086l-2.757 7.683L28.705.086h-3.764l4.925 12.227h3.122L37.913.086zm4.87 0v12.14h9.851V9.365h-6.521V7.44h5.827V4.787h-5.827V2.948h6.434V.086zm17.15 5.828c1.144 0 1.804-.555 1.804-1.44V4.44c0-.954-.694-1.44-1.822-1.44H54.02v2.914h2.22zM50.655.087h5.74c1.855 0 3.14.485 3.954 1.318.711.693 1.075 1.63 1.075 2.826v.035c0 1.856-.988 3.087-2.497 3.729l2.896 4.231h-3.884L55.493 8.55h-1.475v3.676h-3.363V.086zM0 29.757h3.382v-12.14H0zm5.6-12.139h3.139l4.995 6.416v-6.416h3.33v12.139h-2.948L8.93 23.098v6.659H5.6zm13.612 0h9.711v2.948h-6.347v2.063h5.74v2.793h-5.74v4.335h-3.364zm11.235 0h3.365v9.191h5.878v2.948h-9.243zm10.178 6.815v-6.815h3.417v6.746c0 1.751.884 2.584 2.236 2.584 1.354 0 2.238-.798 2.238-2.497v-6.833h3.417v6.729c0 3.919-2.238 5.636-5.69 5.636-3.45 0-5.618-1.752-5.618-5.55m13.299-6.815h9.764v2.861h-6.435v1.838h5.828v2.654h-5.828v1.925h6.522v2.861h-9.851zm11.565 0h3.139l4.994 6.416v-6.416h3.33v12.139h-2.948l-5.185-6.659v6.659h-3.33zm13.195 6.104v-.035c0-3.537 2.723-6.312 6.4-6.312 2.48 0 4.075 1.04 5.15 2.532l-2.532 1.96c-.694-.868-1.491-1.423-2.654-1.423-1.7 0-2.896 1.44-2.896 3.209v.034c0 1.821 1.197 3.244 2.896 3.244 1.266 0 2.012-.59 2.74-1.474l2.533 1.803C89.176 28.838 87.633 30 84.944 30c-3.468 0-6.26-2.653-6.26-6.278m13.073-6.104h9.764v2.861h-6.434v1.838h5.827v2.654h-5.827v1.925h6.521v2.861h-9.851zm17.15 5.827c1.144 0 1.803-.555 1.803-1.44v-.034c0-.954-.694-1.44-1.82-1.44h-2.203v2.914h2.22zm-5.585-5.827h5.74c1.856 0 3.14.485 3.955 1.317.71.694 1.075 1.63 1.075 2.827v.035c0 1.856-.989 3.087-2.497 3.729l2.896 4.231h-3.884l-2.446-3.676h-1.475v3.676h-3.364v-12.14zm16.854 6.104v-.035c0-3.537 2.722-6.312 6.399-6.312 2.48 0 4.075 1.04 5.15 2.532l-2.532 1.96c-.694-.868-1.491-1.423-2.653-1.423-1.7 0-2.896 1.44-2.896 3.209v.034c0 1.821 1.196 3.244 2.896 3.244 1.266 0 2.012-.59 2.74-1.474l2.532 1.803c-1.145 1.578-2.688 2.74-5.376 2.74-3.468 0-6.26-2.653-6.26-6.278m13.073-6.104h9.764v2.861h-6.434v1.838h5.827v2.654h-5.827v1.925h6.521v2.861h-9.851zm11.565 0h3.139l4.995 6.416v-6.416h3.33v12.139h-2.949l-5.185-6.659v6.659h-3.33zm16.576 2.948h-3.642v-2.949h10.649v2.949h-3.642v9.191h-3.365zm8.479-2.948h9.763v2.861h-6.433v1.838h5.826v2.654h-5.826v1.925h6.52v2.861h-9.85zm17.149 5.827c1.144 0 1.803-.555 1.803-1.44v-.034c0-.954-.693-1.44-1.82-1.44h-2.203v2.914h2.22zm-5.585-5.827h5.741c1.855 0 3.139.485 3.954 1.317.71.694 1.075 1.63 1.075 2.827v.035c0 1.856-.988 3.087-2.497 3.729l2.896 4.231h-3.884l-2.446-3.676h-1.474v3.676h-3.365v-12.14z">
+                            </path>
+                        </svg>
+                    </div>
+                    <nav class="nav">
+                        <ul>
+                            <li><a href="#">인플루언서 안내</a></li>
+                            <li><a href="#">광고수익 혜택</a></li>
+                            <li><a href="#">성장 지원 프로그램</a></li>
+                            <li><a href="#">브랜드커넥트</a></li>
+                            <li><a href="#">공지</a></li>
+                        </ul>
+                    </nav>
+                    <div class="log"><a href="#">인플루 언서 로그인</a></div>
+                </div>
+            </div>
+        </header>
+        <!--//해더-->
+
+    <section id="nav-oter">
+        <ul>
+            <li><a href="#">크리에이터 워크숍</a></li>
+            <li><a href="#">슈퍼애드</a></li>
+            <li><a href="#">엑스퍼트 컨설팅</a></li>
+            <li><a href="#">멤버십 혜택</a></li>
+            <li><a href="#">어워드</a></li>
+        </ul>
+    </section>
+    <section id="contents">
+        <div class="cont">
+            <div class="cont1">
+                <div class="font1">엑스퍼트 컨설팅</div>
+                <div class="font2">법률, 세무부터 동영상 제작까지!<br>
+                    지식iN 엑스퍼트 상담, 클래스 이용을 지원합니다.</div>
+                <div class="font3">혼자서는 해결하기 어려웠던 문제들,<br>
+                    1인 최대 10만원의 엑스퍼트 쿠폰으로 전문가의 도움을 받아보세요.<br><br>지급 조건 상세보기<br><br>
+                <a href="#">내 eXpert쿠폰 확인하기</a></div>
+                
+            </div>
+            <div class="cont2">
+                <div class="room1"></div>
+                <div class="room2">
+                    <div class="box1">1</div>
+                    <div class="box2">2</div>
+                    <div class="box3">3</div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <footer id="footer"></footer>
+    </div>
+</body>
+
+</html>

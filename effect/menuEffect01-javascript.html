@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Effect01 - javasctipt</title>
+
+    <style>
+        @font-face {
+            font-family: 'IBMPlexSansKR-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        :root {
+            font-size: 16px;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: url(img/img_h07.png) no-repeat center center;
+            background-size: cover;
+            background-color: lightcoral;
+            height: 100vh;
+            font-size: 16px;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(174, 216, 184, 0.5);
+            z-index: -1;
+        }
+
+        /* info */
+        .info {
+            position: absolute;
+            color: #fff;
+            font-family: 'IBMPlexSansKR-Regular';
+        }
+
+        .info.left {
+            left: 20px;
+            top: 20px;
+        }
+
+        .info.right {
+            right: 20px;
+            top: 20px;
+        }
+
+        .info.bottom {
+            left: 20px;
+            bottom: 20px;
+        }
+
+        .info ul {}
+
+        .info li {
+            font-size: 1rem;
+            line-height: 1.4;
+            list-style: none;
+        }
+
+        .info li a {
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            text-align-last: center;
+            line-height: 25px;
+            display: inline-block;
+            font-size: 0.8rem;
+            margin: 3px;
+        }
+
+        .info li a.active {
+          background-color: #fff;
+          color: #000;
+        }
+        .info li a:hover {
+          border-style: solid;
+        }
+
+        @media(max-width:600px){
+            body {font-size: 12px;}
+            .info.right {display:none;}
+        }
+        
+        /* option */
+
+        #tab-menu {
+            max-width: 600px;
+            background: #eaa110;
+            position: absolute;
+            left: 50%;
+            top: 20vh;
+            transform: translate(-50%);
+            border-radius: 5px;
+            font-family: 'IBMPlexSansKR-Regular';
+        }
+
+        #tab-btn ul {
+            display: flex;
+        }
+
+        #tab-btn li {
+            flex-basis: 20%;
+            text-align: center;
+            list-style: none;
+        }
+
+        #tab-btn li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 1.5em 1.5em 1em 1.5em;
+            display: block;
+        }
+
+        #tab-btn li.active a {
+            border-bottom: 3px solid #2b110e;
+            color: #2b110e
+        }
+
+        #tab-cont {
+            background: #fff;
+            padding: 1.5em;
+            border-radius: 0 0 5px 5px;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        #tab-cont>div {
+            display: none;
+        }
+
+        #tab-cont>div:nth-child(1) {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="info left">
+        <h1>Tab Menu Effect01 - javasctipt</h1>
+        <p>탭 메뉴 이펙트</p>
+    </div>
+
+    <nav class="info right">
+        <ul>
+            <li><a href="menuEffect01-jquery.html">1</a> <a class="active" href="menuEffect01-javascript.html">1</a></li>
+            <li><a href="menuEffect02-jquery.html">2</a> <a href="menuEffect02-javascript.html">2</a></li>
+            <li><a href="menuEffect03-jquery.html">3</a> <a href="menuEffect03-javascript.html">3</a></li>
+            <li><a href="menuEffect04-jquery.html">4</a> <a href="menuEffect04-javascript.html">4</a></li>
+            <li><a href="menuEffect05-jquery.html">5</a> <a href="menuEffect05-javascript.html">5</a></li>
+            <li><a href="menuEffect06-jquery.html">6</a> <a href="menuEffect06-javascript.html">6</a></li>
+            <li><a href="menuEffect07-jquery.html">7</a> <a href="menuEffect07-javascript.html">7</a></li>
+            <li><a href="menuEffect08-jquery.html">8</a> <a href="menuEffect08-javascript.html">8</a></li>
+            <li><a href="menuEffect09-jquery.html">9</a> <a href="menuEffect09-javascript.html">9</a></li>
+            <li><a href="menuEffect10-jquery.html">10</a> <a href="menuEffect10-javascript.html">10</a></li>
+        </ul>
+    </nav>
+
+    <!-- contents -->
+    <section class="contents">
+        <div id="tab-menu">
+            <div id="tab-btn">
+                <ul>
+                    <li class="active"><a href="#">Tab1</a></li>
+                    <li><a href="#">Tab2</a></li>
+                    <li><a href="#">Tab3</a></li>
+                    <li><a href="#">Tab4</a></li>
+                    <li><a href="#">Tab5</a></li>
+                </ul>
+            </div>
+            <div id="tab-cont">
+                <div>1. 삼성생명·교보생명·NH농협생명은 다음달 보장성보험의 예정이율을 2.25%에서 2.0%로 조정할 계획이다. 동양생명도 갱신형 보장성 상품과 종신보험에 대한 예정이율을 2.25%로 내릴 예정이다.</div>
+                <div>2. 업계는 예정이율이 0.25%포인트 떨어지면 신규 또는 갱신 보험계약의 보험료가 평균 7∼13% 오를 것으로 내다보고 있다.</div>
+                <div>3. 자동차 보험료도 오른다. MG손해보험은 이번달 개인용 자동차보험료를 평균 2% 인상했다.</div>
+                <div>4. 으나, MG손보는 지난해 107.7%의 손해율을 기록했다. 이에따라 내달 손보사들의 자동차 보험료 인상이 불가피할 것이란 관측이 나온다.</div>
+                <div>5. 실제 캐롯손해보험은 현재 5% 가량 인상안을 논의 중이며, AXA손해보험도 영업용 차량 보험료 인상을 검토 중인 것으로 알려졌다.
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //contents -->
+
+    <!-- script -->
+    <script>
+    //const tabBtn = $("#tab-btn> ul > li");
+    //const tabCont = $("#tab-cont > div");
+
+    //tabBtn.css("color","red")
+    // tabBtn.click(function(){
+    //         let target = $(this);
+    //         let index = target.index();
+    //         //alert(index)
+    //         tabBtn.removeClass("active");
+    //         target.addClass("active");
+    //         tabCont.css("display","none");
+    //         tabCont.eq(index).css("display","block");
+    //     });
+      const tabBtn = document.querySelectorAll("#tab-btn > ul > li");
+      const tabCont = document.querySelectorAll("#tab-cont > div");
+
+      tabBtn.forEach((elem,index)=>{
+          elem.addEventListener("click",function(){
+          
+            tabBtn.forEach((el) => {
+                el.classList.remove("active");
+            });
+            elem.classList.add("active");
+
+            tabCont.forEach(el=> {
+              el.style.display = "none"
+            });
+            tabCont[index].style.display = "block";
+        });
+      });
+      
+    </script>
+</body>
+
+</html>
